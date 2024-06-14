@@ -17,7 +17,7 @@ const createdTodoSchema = joi.object({
 router.post("/todos", async (req, res, next) => {
   // 1. 클라이언트로부터 받아온 value 데이터를 가져온다
   try {
-    const validation = await createdTodoSchem46a.validateAsync(req.body);
+    const validation = await createdTodoSchema.validateAsync(req.body);
 
     const { value } = validation;
 
